@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - node
+script:
+  - node scripts/build.js
 cache:
   directories:
     - node_modules
