@@ -1,7 +1,7 @@
 var Authentication = artifacts.require("./Authentication.sol");
 
 contract('Authentication', function(accounts) {
-
+//add comment
   it("...should sign up and log in a user.", function() {
     return Authentication.deployed().then(function(instance) {
       authenticationInstance = instance;
