@@ -1,0 +1,25 @@
+# language: node_js
+# node_js:
+#   - node
+# cache:
+#   yarn: true
+#   directories:
+#     - node_modules
+# script:
+#   - mkdir -p build/css
+#   - cp index.html build_webpack/
+#   - ls build
+#   - yarn run sass
+#   - yarn run css-preprocess
+#   - ls build
+deploy:
+  provider: s3
+  access_key_id: "AKIAJVZSDD6SWXNHMFCQ"
+  secret_access_key: "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"
+  bucket: "app.adhat-test.bucket"
+  acl: public_read
+  skip_cleanup: true
+  local_dir: build
+# branches:
+#   only:
+#     - master
